@@ -1,0 +1,27 @@
+<div class="img">
+    <div class="row g-0">
+        <div class="col my-5">
+            <div class="container  rounded py-3 " id="container" style="background-color: #fff; width: 500px;">
+              <h1 class="text-center">Login Form</h1>
+                <!-- login form -->
+                <form #userLoginForm="ngForm" (ngSubmit)="userLogin(userLoginForm.value)">
+                  <!-- Enter Email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" [(ngModel)]="admin.email" name="email" class="form-control" placeholder="Enter Email" id="email" >
+                    </div>
+                  <!-- Enter Password -->
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" [(ngModel)]="admin.password" name="password" class="form-control" placeholder="Enter Password" id="password">
+                    </div>
+                  <!-- Login Button -->
+                    <div class=" text-center">
+                      <button [disabled]="registerForm.invalid"  class="btn userloginbtn" style="outline: 1px solid  rgb(224, 3, 224); color:rgb(224, 3, 224);">login</button>
+                    </div>
+                  </form>
+       </div>
+        </div>
+     </div>
+  
+</div>

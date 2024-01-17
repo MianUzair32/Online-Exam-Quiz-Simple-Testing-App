@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-3 ps-0 mt-2 mb-2">
+        <div class="sidebar">
+          <ul class="admin-link">
+            <li><a routerLink="/admin-dash/dashboard" class="fs-4 me-5 pe-3 ">Dashboard</a></li>
+            <li><a routerLink="/admin-dash/user" class="fs-4 me-5 pe-3 ">User</a></li>
+            <li><a routerLink="/admin-dash/feedback" class="fs-4 me-5 pe-3 ">Feedback</a></li>
+            <li><a routerLink="/admin-dash/ranking" class="fs-4 me-5 pe-3">Ranking</a></li>
+            <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
+          </ul>
+        </div>
+      </div>
+      <div class="col admin-home">
+        <router-outlet></router-outlet> <!-- Move this outside the sidebar -->
+        <table style="width: 100%;" class="table table-striped text-center  ">
+          <thead class="gradient-custome" >
+            <tr>
+              <th>S.N.</th>
+              <th>Subject</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>By</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table content here -->
+            <tr>
+                <td>1</td>
+                <td>Distributed Databases</td>
+                <td>uzairmian395&#64;gmail.com</td>
+                <td>11-Nov-2023</td>
+                <td>06:00PM</td>
+                <td>M.Uzair Zulfiqar</td>
+                <td class="feedback-icon"><i class="fa-solid fa-folder-open pe-4"></i><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Distributed Databases</td>
+                <td>laiba395&#64;gmail.com</td>
+                <td>11-Nov-2023</td>
+                <td>06:05PM</td>
+                <td>Laiba Ramzan</td>
+                <td class="feedback-icon"><i class="fa-solid fa-folder-open pe-4"></i><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Web Development	</td>
+                <td>hassan12&#64;gmail.com</td>
+                <td>12-Nov-2023</td>
+                <td>04:05PM</td>
+                <td>Hassan Zahid</td>
+                <td class="feedback-icon"><i class="fa-solid fa-folder-open pe-4"></i><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Graphic Designer</td>
+                <td>hamza13&#64;gmail.com</td>
+                <td>14-Nov-2023</td>
+                <td>02:00PM</td>
+                <td>Hamza Arif</td>
+                <td class="feedback-icon"><i class="fa-solid fa-folder-open pe-4"></i><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>English Spoken</td>
+                <td>aqsa12&#64;gmail.com</td>
+                <td>14-Nov-2023</td>
+                <td>11:00AM</td>
+                <td>Aqsa</td>
+                <td class="feedback-icon"><i class="fa-solid fa-folder-open pe-4"></i><i class="fa-solid fa-trash"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

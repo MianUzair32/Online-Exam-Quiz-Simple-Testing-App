@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-3 ps-0 mt-2 mb-2">
+        <div class="sidebar">
+          <ul class="admin-link">
+            <li><a routerLink="/user-dash/dashboard" class="fs-4 me-5 pe-3 ">Dashboard</a></li>
+            <li><a routerLink="/user-dash/history" class="fs-4 me-5 pe-3 ">History</a></li>
+            <li><a routerLink="/user-dash/userranking" class="fs-4 me-5 pe-3">Ranking</a></li>
+            <li><a routerLink="/user-dash/feedback" class="fs-4 me-5 pe-3">Feedback</a></li>
+            <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
+          <router-outlet></router-outlet>
+          </ul>
+        </div>
+      </div>
+      <div class="col admin-home">
+        <table style="width: 100%;" class="table table-striped text-center  ">
+            <thead class="gradient-custome">
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>College</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Uzair</td>
+                    <td>Male</td>
+                    <td>Government College University Faisalabad</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Laiba</td>
+                    <td>Female</td>
+                    <td>GCUF</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hassan</td>
+                    <td>Male</td>
+                    <td>GC University</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hamza</td>
+                    <td>Male</td>
+                    <td>GC University</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Aqsa</td>
+                    <td>Female</td>
+                    <td>GCUF</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

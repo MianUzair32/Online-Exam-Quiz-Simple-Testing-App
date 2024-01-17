@@ -1,0 +1,8 @@
+.btn{
+    outline-color: rgb(224, 3, 224);
+    outline-style: solid;
+}
+.btn:hover{
+    background-color: rgb(224, 3, 224);
+    color: #fff;
+}

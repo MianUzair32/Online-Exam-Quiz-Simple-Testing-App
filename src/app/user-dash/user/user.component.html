@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-3 ps-0 mt-2 mb-2">
+        <div class="sidebar">
+          <ul class="admin-link">
+            <li><a routerLink="/user-dash/dashboard" class="fs-4 me-5 pe-3 ">Dashboard</a></li>
+            <li><a routerLink="/user-dash/history" class="fs-4 me-5 pe-3">History</a></li>
+            <li><a routerLink="/user-dash/userranking" class="fs-4 me-5 pe-3">Ranking</a></li>
+            <li><a routerLink="/user-dash/userfeedback" class="fs-4 me-5 pe-3">Feedback</a></li>
+            <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
+            <router-outlet></router-outlet>
+          </ul>
+        </div>
+      </div>
+      <div class="col admin-home">
+        <div class="container">
+          <table border="1" style="width: 100%;" class="table table-striped text-center">
+              <thead class="gradient-custome">
+                  <tr>
+                      <th>S.N.</th>
+                      <th>Quiz</th>
+                      <th>Questions Solved</th>
+                      <th>Right</th>
+                      <th>Wrong</th>
+                      <th>Score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>C++</td>
+                      <td>5</td>
+                      <td>5</td>
+                      <td>0</td>
+                      <td>10</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>HTML</td>
+                      <td>10</td>
+                      <td>10</td>
+                      <td>0</td>
+                      <td>20</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>CSS</td>
+                      <td>15</td>
+                      <td>10</td>
+                      <td>5</td>
+                      <td>20</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>JavaScript</td>
+                      <td>20</td>
+                      <td>17</td>
+                      <td>3</td>
+                      <td>17</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>Bootstrap</td>
+                      <td>15</td>
+                      <td>10</td>
+                      <td>5</td>
+                      <td>20</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

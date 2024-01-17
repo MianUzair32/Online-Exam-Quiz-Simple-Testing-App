@@ -1,0 +1,77 @@
+<div class="container-fluid p-0 m-0">
+<div class="img">
+  <div class="row g-0">
+    <div class="col my-5">
+      <div class="container  rounded py-3 " id="container" style="background-color: #fff; width: 500px;">
+        <form [formGroup]="registerForm" (ngSubmit)="userRegister()">
+          <h1 class="text-center mb-3">Register Form</h1>
+          <!-- Name Field -->
+          <div class=" col-md-6 mb-3 m-auto w-75">
+          <input type="text" class="form-control" placeholder="Enter Name" formControlName="user">
+          <span style="color: red;" *ngIf="user && user.invalid && user.touched">This field is not Valid</span>
+          </div>
+          <!-- Email Field -->
+          <div class=" col-md-6 mb-3 m-auto w-75">
+            <input type="text" class="form-control"  placeholder="Enter Email" formControlName="email">         
+            <span style="color: red;" *ngIf="email && email.invalid && email.touched">This field is not Valid</span>
+          </div>
+          <!-- Mobile Field -->
+          <div class=" col-md-6 mb-3 m-auto w-75">
+            <input type="number" class="form-control"  placeholder="Enter Mobile No." formControlName="number">
+            <span style="color: red;" *ngIf="number && number.invalid && number.touched">This field is not Valid</span>
+          </div>
+          <!-- Institute Field -->
+          <div class=" col-md-6 mb-3 m-auto w-75">
+            <input type="text" class="form-control"  placeholder="Institute Name"  formControlName="institute">         
+            <span style="color: red;" *ngIf="institute && institute.invalid && institute.touched">This field is not Valid</span>
+          </div>
+          <!-- Password Field -->
+            <div class=" col-md-6 mb-3 m-auto w-75">
+            <input type="password" class="form-control"  placeholder="Enter Password" formControlName="password">          
+            <span style="color: red;" *ngIf="password && password.invalid && password.touched">This field is not Valid</span>
+          </div>
+          <!-- Submit Button -->
+          <div class="button text-center ">
+            <button [disabled]="registerForm.invalid" class="btn btn-primary col-md-6 mb-3 w-50 ms-4" style="background-color: rgb(224, 3, 224); outline-color: rgb(224, 3, 224);" >Submit</button>
+          <span class="ms-2 pb-3" (click) = "Login()" style="cursor: pointer; color:rgb(224, 3, 224); ">Login<i class="fa-solid fa-angle-right"></i></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <!-- Login Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- login form -->
+        <form action="user-dashboard.html" method="get" target="_blank">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" >login</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
