@@ -1,25 +1,19 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { pathToFileURL } from 'url';
-
 class Model {
   email: string = '';
   password: any = null;
 
 }
-
 @Component({
   selector: 'app-adminlogin',
   templateUrl: './adminlogin.component.html',
   styleUrls: ['./adminlogin.component.css'] // Use styleUrls instead of styleUrl
 })
-
-
-
 export class AdminloginComponent {
   admin = new Model();
   constructor(private router: Router) { }
-
+  // login:boolean=false;
   AdminForm() {
     // if (this.admin.email == 'uzairmian395@gmail.com' && this.admin.password == 123) {
     //   this.router.navigate(['admin-dash/dashboard']);
@@ -40,5 +34,5 @@ export class AdminloginComponent {
       alert('login failed')
     }
   }
-  
+ 
 }

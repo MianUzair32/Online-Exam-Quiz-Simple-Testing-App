@@ -2,11 +2,12 @@
     <div class="row">
       <div class="col-3 ps-0 mt-2 mb-2">
         <div class="sidebar">
-          <ul class="admin-link">
-            <li><a routerLink="/admin-dash/dashboard" class="fs-4 me-5 pe-3 ">Dashboard</a></li>
-            <li><a routerLink="/admin-dash/user" class="fs-4 me-5 pe-3 ">User</a></li>
-            <li><a routerLink="/admin-dash/feedback" class="fs-4 me-5 pe-3">Feedback</a></li>
-            <li><a routerLink="/admin-dash/ranking" class="fs-4 me-5 pe-3">Ranking</a></li>
+          <ul class="admin-link text-start p-0 m-0 mt-4">
+            <li><a routerLink="/admin-dash/dashboard" class="fs-5 ">Dashboard</a></li>
+            <li><a routerLink="/admin-dash/user" class="fs-5 ">User</a></li>
+            <li><a routerLink="/admin-dash/feedback" class="fs-5">Feedback</a></li>
+            <li><a routerLink="/admin-dash/ranking" class="fs-5">Ranking</a></li>
+            <li><a routerLink="/admin-dash/Create-Quiz" class="fs-5 ">Create Quiz</a></li>
             <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
           <router-outlet></router-outlet>
           </ul>

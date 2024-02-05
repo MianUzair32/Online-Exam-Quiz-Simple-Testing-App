@@ -1,26 +1,28 @@
+<div class="container-fluid m-0 p-0">
 <div class="img">
-  <div class="row g-0">
+  <div class="row g-0 justify-content-center">
     <div class="col my-5">
-      <div class="container  rounded py-3 " id="container" style="background-color: #fff; width: 500px;">
+      <div class="container  rounded py-3 " id="container" style="background-color: #fff; max-width: 500px;">
         <h1 class="text-center">Admin Login Form</h1>
         <!-- login form -->
         <form #adminLoginForm="ngForm" (ngSubmit)="AdminForm(adminLoginForm.value)">
           <!-- Enter Email -->
-          <div class="mb-3">
+          <div class="form-group mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="email" [(ngModel)]="admin.email" name="email" class="form-control" placeholder="Enter Email" id="email">
           </div>
           <!-- Enter Password -->
-          <div class="mb-3">
+          <div class="form-group">
             <label for="password" class="form-label">Password</label>
             <input type="password" [(ngModel)]="admin.password" name="password" class="form-control" placeholder="Enter Password" id="password">
           </div>
           <!-- Login Button -->
-          <div class=" text-center">
-            <button [disabled]="registerForm.invalid" class="btn" style="outline: 1px solid  rgb(224, 3, 224); color:rgb(224, 3, 224);">login</button>
+          <div class=" text-center mt-3">
+            <button [disabled]="adminLoginForm.invalid" class="btn w-25 loginBtn" style="outline: 1px solid  rgb(224, 3, 224); color:rgb(224, 3, 224);">login</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+</div>
 </div>

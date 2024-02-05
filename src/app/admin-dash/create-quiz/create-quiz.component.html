@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-3 ps-0 mt-2 mb-2">
+            <div class="sidebar">
+                <ul class="admin-link text-start p-0 m-0 mt-4">
+                  <li><a routerLink="/admin-dash/dashboard" class="fs-5  ">Dashboard</a></li>
+                  <li><a routerLink="/admin-dash/user" class="fs-5  ">User</a></li>
+                  <li><a routerLink="/admin-dash/feedback" class="fs-5   ">Feedback</a></li>
+                  <li><a routerLink="/admin-dash/ranking" class="fs-5 ">Ranking</a></li>
+                  <li><a routerLink="/admin-dash/Create-Quiz" class="fs-5 ">Create Quiz</a></li>
+        
+                  <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
+                  <router-outlet></router-outlet>
+                </ul>
+              </div>
+        </div>
+        <div class="col-12 col-md ">           
+            <div class="container mt-5 ms-0 ps-0">
+                <div class="bg-secondary text-white p-5 rounded">
+                  <div class="text-end mt-0 pt-0">
+                    Questions {{ currentIndex + 1 }} of {{ questions.length }}
+                  </div>
+                    <h3 class="fs-3">{{ questions[currentIndex].question }}</h3>
+                    <ul>
+                      <!-- Loop through options for the current question -->
+                      <li *ngFor="let option of questions[currentIndex].options" class="fs-5 p-3 ms-5 " style="list-style-type: none;">
+                        <label>
+                          <input type="radio" name="questionOption" [(ngModel)]="selectedOption" [value]="option" >
+                          {{ option }}
+                        </label>
+                      </li>
+                    </ul>
+                  
+                    <div class="text-start">
+                      <button (click)="nextQuestion()" class="btn btn-primary btn-sm" style="margin-left: 100px;">Next Question</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  

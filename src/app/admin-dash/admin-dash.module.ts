@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { AdminnavComponent } from './adminnav/adminnav.component';
 import { FeedbackcheckComponent } from './feedbackcheck/feedbackcheck.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { RankingComponent } from './ranking/ranking.component';
     UserComponent,
     AdminnavComponent,
     FeedbackcheckComponent,
-    RankingComponent
+    RankingComponent,
+    CreateQuizComponent
   ],
   imports: [
     CommonModule,

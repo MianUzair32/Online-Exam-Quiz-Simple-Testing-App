@@ -11,8 +11,7 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-/* .userloginbtn:hover{
-    background-color: rgb(224, 3, 224); 
-    color: #fff;
-    width: 30%;
-} */
+.loginBtn:hover{
+ background-color: rgb(224, 3, 224);
+ color:white !important;
+}

@@ -7,8 +7,9 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { UserfeedbackComponent } from './userfeedback/userfeedback.component';
 import { UserrankingComponent } from './userranking/userranking.component';
-
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -19,7 +20,10 @@ import { UserrankingComponent } from './userranking/userranking.component';
   imports: [
     CommonModule,
     UserDashRoutingModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule
   ]
 })
 export class UserDashModule { }

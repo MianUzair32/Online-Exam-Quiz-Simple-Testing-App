@@ -1,26 +1,24 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { OnInit } from '@angular/core';
+import { ServiceService } from './services/service.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Testing-App';
-  adminNav:boolean=false;
-constructor(private router: Router)
-{}
-  ngOnInit(){
-    //  this.router.events.subscribe((val =>{
-    //   console.log(val)
-    // }))
-   
-    // if( ){
+  Navbar: boolean = false;
 
-    // }
-    const isLoggedInAsAdmin = true;
+  constructor(public route: Router,
+    public serviceService: ServiceService) {
+    console.log(`Path ${this.route.url}`);
+   }
 
-    this.adminNav = isLoggedInAsAdmin;
-  }
+  ngOnInit() {
+
+}
 }

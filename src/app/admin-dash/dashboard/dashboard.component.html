@@ -1,20 +1,27 @@
 
+<!-- <ngb-alert [dismissible]="false">
+	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert> -->
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3 ps-0 mt-2 mb-2">
+    <div class="col-12 col-md-3 ps-0 mt-2 mb-2">
       <div class="sidebar">
-        <ul class="admin-link">
-          <li><a routerLink="/dashboard" class="fs-4 me-5 pe-3 ">Dashboard</a></li>
-          <li><a routerLink="/admin-dash/user" class="fs-4 me-5 pe-3 ">User</a></li>
-          <li><a routerLink="/admin-dash/feedback" class="fs-4 me-5 pe-3  ">Feedback</a></li>
-          <li><a routerLink="/admin-dash/ranking" class="fs-4 me-5 pe-3">Ranking</a></li>
+        <ul class="admin-link text-start p-0 m-0 mt-4">
+          <li><a routerLink="/dashboard" class="fs-5  ">Dashboard</a></li>
+          <li><a routerLink="/admin-dash/user" class="fs-5  ">User</a></li>
+          <li><a routerLink="/admin-dash/feedback" class="fs-5   ">Feedback</a></li>
+          <li><a routerLink="/admin-dash/ranking" class="fs-5 ">Ranking</a></li>
+          <li><a routerLink="/admin-dash/Create-Quiz" class="fs-5 ">Create Quiz</a></li>
+
           <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
+         
           <!-- <p class="text-center">{{email}}</p> -->
           <router-outlet></router-outlet>
         </ul>
       </div>
     </div>
-    <div class="col  admin-home">
+    <div class="col-12 col-md  admin-home">
       <table border="1" style="width: 100%;" class="table table-striped text-center">
         <thead class="gradient-custome">
             <tr>
@@ -34,7 +41,7 @@
                 <td>10</td>
                 <td>10 Min</td>
                 <td>
-                  <a href="give_test.html"><button type="submit" class="btn  w-100" style="background-color: palevioletred; color: #fff;">Start</button></a>
+                  <a routerLink='/admin-dash/Create-Quiz'><button type="submit" class="btn  w-100" style="background-color: palevioletred; color: #fff;">Start</button></a>
                 </td>
             </tr>
             <tr>

@@ -1,26 +1,45 @@
+<!-- navbar.component.html -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(224, 3, 224);" id="nav">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink=''>Test App</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active"  routerLink='home'>Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" routerLink='about'>About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" routerLink='contact'>Contact</a>
-          </li>
-        </ul>
-        <button type="button" class="btn btn-outline-light me-4" data-bs-toggle="modal" data-bs-target="#loginModal" (click)="adminLogin()">Admin</button>
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" routerLink=''  >Test App</a> -->
+    <a class="navbar-brand" [routerLink]="serviceService.isAdminPage ? '/admin-dash/dashboard' : ''" *ngIf="serviceService.isAdminPage">
+      Admin Dashboard
+    </a>
+    <a class="navbar-brand" [routerLink]="serviceService.isUserPage ? '/user-dash/dashboard' : ''" *ngIf="serviceService.isUserPage">
+      User Dashboard
+    </a>
+    <a class="navbar-brand" [routerLink]="!(serviceService.isAdminPage || serviceService.isUserPage) ? 'home' : ''" *ngIf="!(serviceService.isAdminPage || serviceService.isUserPage)">
+      Test App
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="!serviceService.isAdminPage && !serviceService.isUserPage" >
+          <a class="nav-link active" routerLink='home' [hidden]="!serviceService.nav ">Home</a>
+        </li>
+        <li class="nav-item" *ngIf="!serviceService.isAdminPage && !serviceService.isUserPage">
+          <a class="nav-link active" routerLink='about' [hidden]="!serviceService.nav">About</a>
+        </li>
+        <li class="nav-item" *ngIf="!serviceService.isAdminPage && !serviceService.isUserPage">
+          <a class="nav-link active" routerLink='contact' [hidden]="!serviceService.nav">Contact</a>
+        </li>
+      </ul>
+      <div *ngIf="serviceService.isAdminPage">
+        <span class="text-light me-4 fs-5">Hello, Admin</span>
       </div>
+      <div >
+        <span class="text-light me-4 fs-5">{{serviceService.username}}</span>
+      </div>
+      <button type="button" class="btn btn-outline-light me-4" 
+        (click)="adminLogin()" *ngIf="!serviceService.isAdminPage && !serviceService.isUserPage">Admin</button>
     </div>
-  </nav>
-  
-  <div>
-    <router-outlet></router-outlet>
   </div>
+</nav>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

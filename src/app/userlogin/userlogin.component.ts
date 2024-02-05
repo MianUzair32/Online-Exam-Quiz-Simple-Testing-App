@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceService } from '../services/service.service';
+
 class Model {
   email: string = '';
   password: any = null;
@@ -12,7 +14,8 @@ class Model {
 })
 export class UserloginComponent {
   admin = new Model();
-  constructor(private router: Router){ }
+  userName: string = '';
+  constructor(private router: Router,public serviceService: ServiceService){ }
   //  email: string='';
   //  password: any='';
   userLogin(item: any){
@@ -24,10 +27,14 @@ export class UserloginComponent {
   // }
   let mail = localStorage.getItem("Email");
   let pass = localStorage.getItem("Password");
-
+  let name = localStorage.getItem('Name');
+  this.userName = name || '';
   if(this.admin.email == mail && this.admin.password == pass){
-  localStorage.setItem('Email', this.admin.email);
+    localStorage.setItem('Email', this.admin.email);
   localStorage.setItem('Password', this.admin.password);
+
+   // Store the name in local storage
+
   this.router.navigate(['user-dash/dashboard']);
 }
 else{

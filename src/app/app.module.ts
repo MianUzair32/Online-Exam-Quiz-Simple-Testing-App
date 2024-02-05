@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [
     provideClientHydration()
