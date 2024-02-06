@@ -1,0 +1,6 @@
+.contact{
+/* Piglet Gradient */
+background: #ee9ca7, #ffdde1;
+background: -webkit-linear-gradient(90deg, #ee9ca7, #ffdde1);
+background: linear-gradient(90deg, #ee9ca7, #ffdde1);
+}

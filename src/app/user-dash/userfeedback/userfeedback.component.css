@@ -25,5 +25,8 @@
     padding-right: 8px;
   }
   #containers{
-    margin-top: 30px;
+   /* Anamnisar Gradient */
+background: #9796f0, #fbc7d4;
+background: -webkit-linear-gradient(90deg, #9796f0, #fbc7d4);
+background: linear-gradient(90deg, #9796f0, #fbc7d4);
   }

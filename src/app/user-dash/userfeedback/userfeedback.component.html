@@ -1,4 +1,4 @@
-<div class="container my-5 bg-secondary p-4 rounded" id="containers">
+<div class="container my-5 bg-secondary p-4 rounded shadow-lg" id="containers">
   <h1 class="text-center text-white mb-3">Feedback Form</h1>
   <form class="form">
     <div class="row">
@@ -20,7 +20,7 @@
       <mat-form-field class="example-full-width">
         <mat-label>Message</mat-label>
         <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
-        <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+        <!-- <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint> -->
         <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
       </mat-form-field>
     </p>
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="text-center">
-      <button mat-raised-button color="accent">Submit</button>
+      <button mat-raised-button color="accent" class="w-25 fs-4 p-2">Submit</button>
     </div>
   </form>
 </div>

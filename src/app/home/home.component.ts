@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     user: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9 ]+$')]),
     email: new FormControl('', [Validators.required, Validators.email]),
     number: new FormControl('', [Validators.required, Validators.pattern('[0-9]+$')]),
-    institute: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]+$')]),
+    institute: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]),
     password: new FormControl('', [Validators.required, Validators.minLength(8)])
   });
   constructor(private router: Router , public serviceService: ServiceService) {

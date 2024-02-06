@@ -1,11 +1,11 @@
 
-<div class="container-fluid p-0 m-0">
+<div class="container-fluid p-0 m-0 shadow-lg">
 <div class="img">
   <div class="row g-0">
     <div class="col-md my-5">
       <div class="container  rounded py-3 " id="container" style="background-color: #fff; max-width: 500px; margin: auto;">
         <form [formGroup]="registerForm" (ngSubmit)="userRegister()">
-          <h1 class="text-center mb-3">Register Form</h1>
+          <h2 class="text-center mb-3">Register Form</h2>
           <!-- Name Field -->
           <div class=" col-md-6 mb-3 m-auto w-75">
           <input type="text" class="form-control" placeholder="Enter Name" formControlName="user">
