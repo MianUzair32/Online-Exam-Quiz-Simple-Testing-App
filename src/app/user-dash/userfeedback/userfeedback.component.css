@@ -25,8 +25,8 @@
     padding-right: 8px;
   }
   #containers{
-   /* Anamnisar Gradient */
-background: #9796f0, #fbc7d4;
-background: -webkit-linear-gradient(90deg, #9796f0, #fbc7d4);
-background: linear-gradient(90deg, #9796f0, #fbc7d4);
+/* Ibtesam Gradient */
+background: #00F5A0, #00D9F5;
+background: -webkit-linear-gradient(90deg, #00F5A0, #00D9F5);
+background: linear-gradient(90deg, #00F5A0, #00D9F5);
   }

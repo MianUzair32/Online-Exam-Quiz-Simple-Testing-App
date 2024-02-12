@@ -10,12 +10,14 @@ import { UserrankingComponent } from './userranking/userranking.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import { McqsTestComponent } from './mcqs-test/mcqs-test.component';
 @NgModule({
   declarations: [
     DashboardComponent,
     UserComponent,
     UserfeedbackComponent,
-    UserrankingComponent
+    UserrankingComponent,
+    McqsTestComponent
   ],
   imports: [
     CommonModule,

@@ -2,14 +2,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(224, 3, 224);" id="nav">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" routerLink=''  >Test App</a> -->
-    <img src="/assets/images/logo.jpg" alt="" width="35px" height="35px" class="me-3">
+    <img src="/assets/images/logo.jpg" alt="" width="36px" height="36px" class="me-3 rounded">
     <a class="navbar-brand" [routerLink]="serviceService.isAdminPage ? '/admin-dash/dashboard' : ''" *ngIf="serviceService.isAdminPage">
       Admin Dashboard
     </a>
     <a class="navbar-brand" [routerLink]="serviceService.isUserPage ? '/user-dash/dashboard' : ''" *ngIf="serviceService.isUserPage">
       User Dashboard
     </a>
-    <a class="navbar-brand" [routerLink]="!(serviceService.isAdminPage || serviceService.isUserPage) ? 'home' : ''" *ngIf="!(serviceService.isAdminPage || serviceService.isUserPage)">
+    <a class="navbar-brand fs-5" [routerLink]="!(serviceService.isAdminPage || serviceService.isUserPage) ? 'home' : ''" *ngIf="!(serviceService.isAdminPage || serviceService.isUserPage)">
       Test App
     </a>
     

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 @Component({
   selector: 'app-userfeedback',
   templateUrl: './userfeedback.component.html',
@@ -7,5 +6,5 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
   
 })
 export class UserfeedbackComponent {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
 }
