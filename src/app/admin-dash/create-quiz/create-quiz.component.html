@@ -1,43 +1,126 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-3 ps-0 mt-2 mb-2">
-            <div class="sidebar">
-                <ul class="admin-link text-start p-0 m-0 mt-4">
-                  <li><a routerLink="/admin-dash/dashboard" class="fs-5  ">Dashboard</a></li>
-                  <li><a routerLink="/admin-dash/user" class="fs-5  ">User</a></li>
-                  <li><a routerLink="/admin-dash/feedback" class="fs-5   ">Feedback</a></li>
-                  <li><a routerLink="/admin-dash/ranking" class="fs-5 ">Ranking</a></li>
-                  <li><a routerLink="/admin-dash/Create-Quiz" class="fs-5 ">Create Quiz</a></li>
-        
-                  <button class="btn btn-outline-danger mt-2 me-5" style="color: #fff;" (click)="signout()">Signout</button>
-                  <router-outlet></router-outlet>
-                </ul>
-              </div>
-        </div>
-        <div class="col-12 col-md ">           
-            <div class="container mt-5 ms-0 ps-0">
-                <div class="bg-secondary text-white p-5 rounded">
-                  <div class="text-end mt-0 pt-0">
-                    Questions {{ currentIndex + 1 }} of {{ questions.length }}
-                  </div>
-                    <h3 class="fs-3">{{ questions[currentIndex].question }}</h3>
-                    <ul>
-                      <!-- Loop through options for the current question -->
-                      <li *ngFor="let option of questions[currentIndex].options" class="fs-5 p-3 ms-5 " style="list-style-type: none;">
-                        <label>
-                          <input type="radio" name="questionOption" [(ngModel)]="selectedOption" [value]="option" >
-                          {{ option }}
-                        </label>
-                      </li>
-                    </ul>
-                  
-                    <div class="text-start">
-                      <button (click)="nextQuestion()" class="btn btn-primary btn-sm" style="margin-left: 100px;">Next Question</button>
-                    </div>
-                  </div>
+<div class="container bg-info rounded my-4 p-4 mb-2 shadow">
+    <h1 class="text-center text-white test shadow  w-50 m-auto">Create Quiz Test</h1>
+
+    <!-- Question 1 -->
+    <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong>Q #1</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 1">
+            <!-- options -->
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Repeat the structure for other questions with unique ids -->
+    
+    <!-- Question 2 -->
+    <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong >Q #2</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 2">
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong >Q #3</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 3">
+            <!-- options -->
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+            </div>
+        </div>
+    </div>
+    <!-- Question 4 -->
+    <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong >Q #4</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 4">
+            <!-- options -->
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+            </div>
+        </div>
+    </div>
+     <!-- Question 5 -->
+     <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong >Q #5</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 5">
+            <!-- options -->
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+            </div>
+        </div>
+    </div>
+     <!-- Question 6 -->
+     <div class="row justify-content-center ">
+        <div class="col-6 col-md-6">
+            <label for="question1" class="mt-3"><strong >Q #6</strong></label>
+            <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 6">
+            <!-- options -->
+            <div class="options pe-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+                <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+                <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+                <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+            </div>
+        </div>
+    </div>
+ <!-- Question 7 -->
+ <div class="row justify-content-center ">
+    <div class="col-6 col-md-6">
+        <label for="question1" class="mt-3"><strong >Q #7</strong></label>
+        <input type="text" class="form-control mt-2 mb-2" id="question1" placeholder="Question no 7">
+        <!-- options -->
+        <div class="options pe-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_1">
+            <label class="form-check-label" for="radio1_1_1">Default radio 1</label>
+            <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_2">
+            <label class="form-check-label" for="radio1_1_2">Default radio 2</label>
+            <input class="form-check-input" type="radio" name="flexRadioDefault1_1" id="radio1_1_3">
+            <label class="form-check-label" for="radio1_1_3">Default radio 3</label>
+        </div>
+    </div>
+</div>
   
+
+    <!-- Add more questions as needed -->
+
+</div>
+<div class="text-center ">
+    <button class=" btn btn-info text-white shadow mb-3 mt-2 w-25">Submit</button>
+</div>

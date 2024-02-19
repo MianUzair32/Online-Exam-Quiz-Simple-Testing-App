@@ -1,32 +1,13 @@
-.sidebar {
-    background-color: rgb(224, 3, 224);
-    color: #fff;
-    padding:  20px;
-    height: 89vh;
-    width: 70%;
-    text-align: center;
+.custom-container{
+    background-color: #333; /* Specify your desired background color */
+    min-height: 400px;
+    margin-bottom: 20px; 
 }
-
-.admin-home{
-    width: 100%;
-    margin-right: 145px;
-    margin-top: 8%;
-
+.form-check-input,.form-check-label{
+    padding: 0 5px;
 }
-.admin-link{
-    list-style: none;
-    /* margin-top: 25px; */
+.test{
+    background: linear-gradient(to right  , skyblue , purple,pink,blue);
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.admin-link li{
-    margin-bottom: 45px;
-}
-.admin-link a{
-    color: #fff;
-    text-decoration: none;
-
-}
-.gradient-custome th{
-    /* background: linear-gradient(to right, rgba(153, 97, 218, 0.911), rgba(255, 85, 190, 0.9)); */
-    background-color: palevioletred;
-    color: #fff;
-    }
